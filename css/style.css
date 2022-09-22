@@ -1,0 +1,183 @@
+/* Font Style (Add this later) */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Mukta', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 1000% 1000%;
+    background-repeat: no-repeat;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+     
+        50% {
+            background-position: 100% 50%;
+        }
+     
+        100% {
+            background-position: 0% 50%;
+        }
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    text-decoration: underline;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* --------- Nav Bar Styling --------- */
+.navbar {
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar .container {
+    padding: 0 60px;
+}
+
+.navbar a {
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #000 solid;
+}
+
+/* ------ Information about Dev ------ */
+.developer .grid {
+    padding-top: 100px;
+    grid-template-areas: 
+        "info img";
+    grid-template-columns: 2fr 1fr;
+}
+
+.developer .dev-info {
+    grid-area: info;
+    align-self: start;
+    padding: 40px;
+}
+
+.developer .dev-info h1 {
+    padding-bottom: 30px;
+}
+
+.developer .dev-img {
+    grid-area: img;
+    justify-self: center;
+    display: grid;
+}
+
+.developer .img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img:first-of-type {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.img:last-of-type {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+}
+
+/* ------ Projects ------ */
+.projects .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projects .container:first-child {
+    padding: 100px 40px 40px;
+}
+
+.projects img {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: transform .3s;
+}
+
+.projects img:hover {
+    filter: brightness(60%);
+    transform: scale(1.025);
+}
+
+.projects .project-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+
+
+
