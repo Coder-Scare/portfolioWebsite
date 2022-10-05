@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio Website</title>
 </head>
 <body>
@@ -16,23 +17,29 @@
 
             <nav>
                 <ul role="presentation">
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Content</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skill">Skills</a></li>
                 </ul>
-
-                <!-- Hamburger Icon -->
                 
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="toggle dark mode" title="toggle dark mode">
+                    <span class="dark-toggle"><?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="256" width="256"/><circle cx="128" cy="128" fill="none" r="96" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="128" fill="none" r="56" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></span>
+                    <span class="light-toggle"><?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="256" width="256"/><circle cx="128" cy="128" fill="none" r="96" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="128" fill="none" r="56" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></span>
+                    <span class="dark-click"><?xml version="1.0" ?><svg height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-27-one-finger-click"><path d="M13.407436,1 L13.407436,5 L14.407436,5 L14.407436,1 L13.407436,1 L13.407436,1 Z M19.8099435,3.57686389 L16.7013597,6.09414546 L17.3306801,6.87129142 L20.4392639,4.35400985 L19.8099435,3.57686389 L19.8099435,3.57686389 Z M21.8148721,10.3124234 L17.9173918,9.41261918 L17.6924408,10.3869892 L21.589921,11.2867935 L21.8148721,10.3124234 L21.8148721,10.3124234 Z M6.22495105,11.2867935 L10.1224313,10.3869892 L9.89748026,9.41261918 L6,10.3124234 L6.22495105,11.2867935 L6.22495105,11.2867935 Z M7.37560816,4.35400985 L10.484192,6.87129142 L11.1135124,6.09414546 L8.00492855,3.57686389 L7.37560816,4.35400985 L7.37560816,4.35400985 Z M19.407436,13.4908981 C19.407436,12.6674978 18.7416388,12 17.907436,12 C17.0790089,12 16.407436,12.6762201 16.407436,13.4908981 L16.407436,15.4325233 L16.407436,18 L15.407436,18 L15.407436,15.5 L15.407436,8.50863659 C15.407436,7.67543961 14.7416388,7 13.907436,7 C13.0790089,7 12.407436,7.66642015 12.407436,8.50863659 L12.407436,18.7983451 C10.3490364,16.5979243 7.63906582,14.1791206 6.52846875,15.2957153 C5.44129897,16.3887562 8.24279803,19.4007216 12.1548115,25.9830936 C13.9174319,28.9488875 16.1477209,30.9995418 19.907436,31 C24.0495719,31 27.407436,27.6421358 27.407436,23.5 L27.407436,20.2468012 L27.407436,15.5063976 C27.407436,14.6744372 26.7416388,14 25.907436,14 C25.0790089,14 24.407436,14.6764628 24.407436,15.5063976 L24.407436,17.7497253 L24.407436,18 L23.407436,18 L23.407436,15.6781559 L23.407436,14.4912653 C23.407436,13.6676622 22.7416388,13 21.907436,13 C21.0790089,13 20.407436,13.6625444 20.407436,14.4912653 L20.407436,15.5082011 L20.407436,17 L19.407436,17 L19.407436,15.5082011 L19.407436,13.4908981 L19.407436,13.4908981 Z" id="one-finger-click"/></g></g></svg></span>
+                    <span class="light-click"><?xml version="1.0" ?><svg height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#000" id="icon-27-one-finger-click"><path d="M13.407436,1 L13.407436,5 L14.407436,5 L14.407436,1 L13.407436,1 L13.407436,1 Z M19.8099435,3.57686389 L16.7013597,6.09414546 L17.3306801,6.87129142 L20.4392639,4.35400985 L19.8099435,3.57686389 L19.8099435,3.57686389 Z M21.8148721,10.3124234 L17.9173918,9.41261918 L17.6924408,10.3869892 L21.589921,11.2867935 L21.8148721,10.3124234 L21.8148721,10.3124234 Z M6.22495105,11.2867935 L10.1224313,10.3869892 L9.89748026,9.41261918 L6,10.3124234 L6.22495105,11.2867935 L6.22495105,11.2867935 Z M7.37560816,4.35400985 L10.484192,6.87129142 L11.1135124,6.09414546 L8.00492855,3.57686389 L7.37560816,4.35400985 L7.37560816,4.35400985 Z M19.407436,13.4908981 C19.407436,12.6674978 18.7416388,12 17.907436,12 C17.0790089,12 16.407436,12.6762201 16.407436,13.4908981 L16.407436,15.4325233 L16.407436,18 L15.407436,18 L15.407436,15.5 L15.407436,8.50863659 C15.407436,7.67543961 14.7416388,7 13.907436,7 C13.0790089,7 12.407436,7.66642015 12.407436,8.50863659 L12.407436,18.7983451 C10.3490364,16.5979243 7.63906582,14.1791206 6.52846875,15.2957153 C5.44129897,16.3887562 8.24279803,19.4007216 12.1548115,25.9830936 C13.9174319,28.9488875 16.1477209,30.9995418 19.907436,31 C24.0495719,31 27.407436,27.6421358 27.407436,23.5 L27.407436,20.2468012 L27.407436,15.5063976 C27.407436,14.6744372 26.7416388,14 25.907436,14 C25.0790089,14 24.407436,14.6764628 24.407436,15.5063976 L24.407436,17.7497253 L24.407436,18 L23.407436,18 L23.407436,15.6781559 L23.407436,14.4912653 C23.407436,13.6676622 22.7416388,13 21.907436,13 C21.0790089,13 20.407436,13.6625444 20.407436,14.4912653 L20.407436,15.5082011 L20.407436,17 L19.407436,17 L19.407436,15.5082011 L19.407436,13.4908981 L19.407436,13.4908981 Z" id="one-finger-click"/></g></g></svg></span>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Information about Dev  -->
+   <section class="content">
+  
+        <!-- Information about Dev  -->
     <section class="developer">
         <div class="container grid">
             <div class="dev-info card">
                 <h1>Wesley Iroegbu</h1>
-                <p>I am an aspiring Fully Stacked Web Developer who is learning to code using Codecademy and various other resources. I have been involved in a multitude of projects, from creating my own tuition website to help market my tuition services, to creating various other websites for specific needs. I have an Electronic Engineering degree (Beng) from The University Of Sheffield. My Electronic Engineering Degree allowed me to learn the C+ coding language. I have more recently become interested in learning many more coding languages. Feel free to check out my work so far and get in touch if you are interested in hiring me for a project or role.</p>
+                <p>I am an aspiring Fully Stacked Web Developer who is learning to code using Codecademy and various other resources. I have been involved in a multitude of projects, from creating my own tuition website to help market my tuition services, to creating various other websites for specific needs. I have an Electronic Engineering degree (Beng) from The University Of Sheffield. My Electronic Engineering Degree allowed me to learn the C++ coding language. I have more recently become interested in learning many more coding languages. Feel free to check out my work so far and get in touch if you are interested in hiring me for a project or role.</p>
             </div>
             <div class="dev-img">
                 <div class="img">
@@ -46,24 +53,24 @@
     </section>
 
     <!-- Projects -->
-    <section class="projects">
+    <section class="projects py4" id="projects">
         <h2 class="container">Projects</h2>
         <div class="container grid center">
             <div class="project">
-                <a href="#">
+                <a href="WKlearning project.html">
                     <img src="images/Project 1 Wes-Key Learning.png" alt="Wes-Key Learning Project Screenshot">
                     <span class="project-title">Wes-Key Learning</span>
                 </a>
    
             </div>
             <div class="project">
-                <a href="#">
+                <a href="Halo-online.html">
                     <img src="images/Project 2 Halo-Online.png" alt="Halo Online Project Screenshot">
                     <span class="project-title">Halo-Online Club</span>
                 </a>
             </div>
             <div class="project">
-                <a href="#">
+                <a href="Tea-Cozy.html">
                     <img src="images/Project 3 Tea Cozy.png" alt="Tea Cozy Cafe Screenshot">
                     <span class="project-title">Tea Cozy</span>
                 </a>
@@ -71,6 +78,66 @@
         </div>
     </section>
 
+    <!-- Skills -->
+    <section class="skills" id="skill">
+        <div class="container center flex">
+            <h2>Skills</h2>
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="container flex">
+            <div class="card center">
+                <i class="fab fa-html5"></i>
+                <h4>HTML5</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-css3-alt"></i>
+                <h4>CSS3</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-js"></i>
+                <h4>JavaScript</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-node-js"></i>
+                <h4>Node.js</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-python"></i>
+                <h4>Python</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-git"></i>
+                <h4>Git</h4>
+            </div>
+            <div class="card center">
+                <i class="fa-brands fa-github"></i>
+                <h4>Git Hub</h4>
+            </div>
+            <div class="card center">
+                <i class="fab fa-markdown"></i>
+                <h4>Markdown</h4>
+            </div>
+            <div class="card center">
+                <i class="fas fa-terminal"></i>
+                <h4>Terminal</h4>
+            </div>
+        </div>
+    </section>
+   </section> 
+    
 
+      <!-- Contact -->
+      <footer class="contact">
+        <h2 class="container">Contact</h2>
+        <div class="container flex">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="center">
+            <span>Made with <span class="heart">&hearts;</span> by Wesley A.K.A Coder_Scare</span>
+        </div>
+    </footer>
+    <script src="scripts/darkmode.js"></script>
 </body>
 </html>

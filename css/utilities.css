@@ -20,13 +20,50 @@
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--background-card-color);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    color: #000;
+    color: var(--primary-text);
 }
 
 .center {
     text-align: center;
 }
+
+/* --- Padding --- */
+.py1 {
+    padding: 10px 0;
+}
+
+.py2 {
+    padding: 20px 0;
+}
+
+.py3 {
+    padding: 50px 0;
+}
+
+.py4 {
+    padding: 100px 0;
+}
+
+/* --- Margin --- */
+.my1 {
+    margin: 10px 0;
+}
+
+.my2 {
+    margin: 20px 0;
+}
+
+.my3 {
+    margin: 50px 0;
+}
+
+.my4 {
+    margin: 100px 0;
+}
+
+
+

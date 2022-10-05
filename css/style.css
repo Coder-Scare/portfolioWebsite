@@ -8,16 +8,65 @@
     margin: 0;
 }
 
+:root {
+    --background-first:#ee7752;
+    --background-second:#e73c7e;
+    --background-third:#23a6d5;
+    --background-fourth:#23d5ab;
+
+    --primary-text: #333;
+    --text-underline-color: #000;
+
+    --background-nav-color: rgba(255, 255, 255, 0.8);
+    --background-footer-color: rgba(255, 255, 255, 0.7);
+    --background-card-color: rgba(255, 255, 255, 0.7);
+
+    --linkedin: #0a66c2ff;
+    --github: #000;
+    --email: rgb(137, 128, 128);
+
+    --toggle-button-color: #333;
+    --toggle-hand-color: yellow;
+}
+
+.darkmode {
+    --background-first:#7f5103;
+    --background-second:#521f1f;
+    --background-third:#0d6730;
+    --background-fourth:#182869;
+
+    --primary-text: #fff;
+    --text-underline-color: #000;
+
+    --background-nav-color: rgba(0,0, 0, 0.8);
+    --background-footer-color: rgba(0, 0, 0, 0.8);
+    --background-card-color: rgba(0, 0, 0, 0.7);
+
+    --linkedin: rgb(39, 142, 245);
+    --github: rgb(181, 238, 12);
+    --email: #fff;
+
+    --toggle-button-color: #333;
+    --toggle-hand-color: yellow;
+}
+
 /* Base Styles */
+html {
+    min-height: 100%;
+}
+
 body {
     font-family: 'Mukta', sans-serif;
-    color: #333;
+    color: var(--primary-text);
     line-height: 1.6;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 1000% 1000%;
+    background: linear-gradient(-45deg, var(--background-first), var(--background-second), var(--background-third), var(--background-fourth));
+    background-size: 400% 400%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     animation: gradient 15s ease infinite;
     height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
 @keyframes gradient {
@@ -29,7 +78,7 @@ body {
             background-position: 100% 50%;
         }
      
-        100% {
+        10% {
             background-position: 0% 50%;
         }
 }
@@ -41,7 +90,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-text);
 }
 
 h1 {
@@ -73,7 +122,10 @@ img {
 /* --------- Nav Bar Styling --------- */
 .navbar {
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--background-nav-color);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .navbar img {
@@ -104,7 +156,58 @@ img {
 }
 
 .navbar a:hover {
-    border-bottom: 2px #000 solid;
+    border-bottom: 2px var(--text-underline-color) solid;
+}
+
+/* ---- Experimental Icons ---- */
+.dark-mode-toggle {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+/* [class*="edark-"] {
+    display: block;
+}
+
+[class*="edark-"]:before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+} */
+
+.dark-toggle, .light-toggle {
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    cursor: pointer;
+    width: 36px;
+    z-index: 1;
+    padding-bottom: -30px;
+}
+
+.dark-click, .light-click {
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    
+}
+
+.dark-toggle, .dark-click {
+    /* display: none; */
+}
+
+
+/* ---- Shift Page down to adjust for navbar ---- */
+.content {
+    padding-top: 70px;
 }
 
 /* ------ Information about Dev ------ */
@@ -155,7 +258,7 @@ img {
 }
 
 .projects .container:first-child {
-    padding: 100px 40px 40px;
+    padding-bottom: 40px;
 }
 
 .projects img {
@@ -170,13 +273,211 @@ img {
 }
 
 .projects .project-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
 }
 
 .projects a:hover {
     text-decoration: underline;
 }
+
+/* ------ Skills ------ */
+.skills {
+    padding-bottom: 100px;
+}
+
+.skills .container:first-child {
+    margin-bottom: 30px;
+}
+
+.skills .fa-code {
+    padding-top: 12px;
+    padding-left: 20px;
+    font-size: 26px;
+}
+
+.skills .flex:last-child {
+   flex-wrap: wrap; 
+}
+
+.skills .card {
+    width: 120px;
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+.skills .card:hover {
+    transform: translateY(-15px);
+}
+
+.skills h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.skills i {
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+/* ------ Contact ------ */
+
+.contact {
+    padding: 20px 0 5px;
+    background-color: var(--background-footer-color);
+}
+
+.contact .container:nth-child(2) {
+    padding: 40px 40px 40px;
+}
+
+.contact .flex {
+    justify-content: start;
+}
+
+.contact a {
+    padding: 0 50px 0 0;
+}
+
+.contact i { 
+    font-size: 30px;
+    transition: transform 0.2s;
+}
+
+.contact i:hover {
+   transform: scale(1.2);
+}
+
+.contact .fa-linkedin {
+    color: var(--linkedin);
+}
+
+.contact .fa-github {
+    color: var(--github);
+}
+
+.contact .fa-envelope {
+    color: var(--email);
+}
+
+.contact .heart {
+    color: red;
+}
+
+/* ------ Wes-Key Learning Project Page------ */
+.project-section .flex {
+    flex-direction: column;
+}
+
+.project-section h1 {
+    padding: 50px 0 20px;
+}
+
+.project-section h2 {
+    padding: 50px 0 10px;
+}
+
+.project-section .card {
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 100px;
+}
+
+.project-section .card h2 {
+    padding: 0 0 20px 0; 
+}
+
+.project-section .card li {
+    padding: 10px 0;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.project-section img {
+    max-width: 1000px;
+}
+
+.project-section img {
+    max-width: 1000px;
+}
+
+.project-section h3 {
+    margin: 50px 0 10px;
+    font-size: 22px;
+}
+
+.project-section h4 {
+    font-size: 18px;
+}
+
+.project-section p {
+    font-size: 18px;
+}
+
+.project-section ol {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.project-section li {
+    padding: 5px 0;
+}
+
+@media(max-width: 1100px) {
+    .projects .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects .project {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .projects .project-title {
+        display: block;
+    }
+
+    .projects img {
+        max-width: 700px;
+    }
+}
+
+/* Tablets & Under */
+@media(max-width: 900px) {
+
+    .developer .grid {
+        grid-template-areas: 
+            "info"
+            "img";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px;
+    }
+  
+}
+
+/* Mobile */
+
+@media(max-width: 600px) {
+
+    .developer .dev-info {
+        margin: 0;
+    }
+
+    .developer .dev-img {
+        margin: 0;
+    }
+
+    .projects{
+        margin-top: -50px;
+    }
+}
+
+
+
+
 
 
 
